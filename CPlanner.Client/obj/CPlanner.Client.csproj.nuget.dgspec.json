@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj": {}
+  },
+  "projects": {
+    "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj",
+        "projectName": "CPlanner.Client",
+        "projectPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj",
+        "packagesPath": "/home/drayh/.nuget/packages/",
+        "outputPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/drayh/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "microsoft.entityframeworkcore.design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "microsoft.entityframeworkcore.sqlserver": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

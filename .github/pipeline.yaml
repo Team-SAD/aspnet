@@ -1,0 +1,59 @@
+jobs: 
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet build
+        
+  test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet test -p:CollectCoverage=true -p:CoverletOutputFormat=opencover -p:CoverletOutput=./test_coverage/ -l trx -r ./test_result/
+
+  analyze:
+    needs:
+      - build
+      - test
+    env:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: dotnet tool install -g dotnet-sonarscanner
+      - run: dotnet-sonarscanner begin -k:'Team-SAD_CalenderPlanner' -o:'team-sad' -d:sonar.login=$SONAR_TOKEN -d:sonar.host.url='https://sonarcloud.io'
+      - run: dotnet build
+      - run: dotnet-sonarscanner end -d:sonar.login=$SONAR_TOKEN
+
+  package:
+    env:
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+    needs:
+      - analyze
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: docker image build -f Dockerfile -t calenderplanner .
+      - run: docker image tag calenderplanner planner123/calenderplanner
+      - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
+      - run: docker push planner123/calenderplanner
+      - run: docker logout
+
+  deploy:
+    needs:
+      - package
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: azure/login@v1  
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: azure/webapps-deploy@v2
+        with:
+          app-name: calenderplanner
+          images: planner123/calenderplanner
+
+name: ci-pipeline
+
+on: push
