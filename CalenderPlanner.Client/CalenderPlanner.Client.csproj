@@ -12,7 +12,4 @@
     <PackageReference Include="npgsql.entityframeworkcore.postgresql" Version="5.0.6" />
   </ItemGroup>
 
-  <ItemGroup>
-  </ItemGroup>
-
 </Project>
