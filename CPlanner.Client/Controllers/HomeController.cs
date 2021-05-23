@@ -18,17 +18,17 @@ namespace CPlanner.Client.Controllers
             _logger = logger;
         }
 
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var client = new HttpClient();
-            var response = await client.GetAsync($"{_confirguration["Services:webapi"]}/home);
-            var result = null;
+            // var client = new HttpClient();
+            // var response = await client.GetAsync($"{_confirguration["Services:aspnet"]}/home);
+            // var result = null;
 
-            if (response == IsSuccessStatusCode)
-            {
-                json
-            }
-
+            // if (response == IsSuccessStatusCode)
+            // {
+            //     json
+            // }
+            return View("index");
 
         }
 
