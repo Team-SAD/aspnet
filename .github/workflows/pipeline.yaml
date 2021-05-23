@@ -51,8 +51,8 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: calenderplanner
-          images: planner123/calenderplanner
+          app-name: PlannerSp
+          images: planner123/aspnet
 
 name: ci-pipeline
 
