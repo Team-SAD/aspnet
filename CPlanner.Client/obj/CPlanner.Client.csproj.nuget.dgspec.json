@@ -47,6 +47,10 @@
             "microsoft.entityframeworkcore.sqlserver": {
               "target": "Package",
               "version": "[5.0.6, )"
+            },
+            "newtonsoft.json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
