@@ -23,6 +23,15 @@ namespace CPlanner.Client
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => 
+            {
+                options.AddPolicy("public", config => 
+                {
+                    config.AllowAnyHeader();
+                    config.AllowAnyMethod();
+                    config.AllowAnyOrigin();
+                });
+            });
             services.AddControllersWithViews();
         }
 
@@ -45,12 +54,12 @@ namespace CPlanner.Client
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseCors();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                             name: "default",
-                            pattern: "{controller=Register}/{action=Register}/{id?}");
+                            pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
