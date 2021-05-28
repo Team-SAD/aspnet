@@ -35,10 +35,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
-      - run: docker image build -f Dockerfile -t calenderplanner .
-      - run: docker image tag calenderplanner planner123/calenderplanner
+      - run: docker image build -f Dockerfile -t aspnet .
+      - run: docker image tag aspnet planner123/aspnet
       - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
-      - run: docker push planner123/calenderplanner
+      - run: docker push planner123/aspnet
       - run: docker logout
 
   deploy:
