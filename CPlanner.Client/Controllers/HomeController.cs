@@ -9,8 +9,10 @@ using CPlanner.Client.Models;
 
 namespace CPlanner.Client.Controllers
 {
+    [Route("[controller]")]
     public class HomeController : Controller
     {
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -18,7 +20,8 @@ namespace CPlanner.Client.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
             // var client = new HttpClient();
             // var response = await client.GetAsync($"{_confirguration["Services:aspnet"]}/home);
@@ -28,6 +31,9 @@ namespace CPlanner.Client.Controllers
             // {
             //     json
             // }
+
+            //var response = await BaseWebClient.Client.GetAsync($"Home");
+            
             return View("index");
 
         }

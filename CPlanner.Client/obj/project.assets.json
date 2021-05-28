@@ -5760,19 +5760,19 @@
     ]
   },
   "packageFolders": {
-    "/home/drayh/.nuget/packages/": {}
+    "/Users/rauf/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj",
+      "projectUniqueName": "/Users/rauf/revature/Planner/aspnet/CPlanner.Client/CPlanner.Client.csproj",
       "projectName": "CPlanner.Client",
-      "projectPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj",
-      "packagesPath": "/home/drayh/.nuget/packages/",
-      "outputPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/obj/",
+      "projectPath": "/Users/rauf/revature/Planner/aspnet/CPlanner.Client/CPlanner.Client.csproj",
+      "packagesPath": "/Users/rauf/.nuget/packages/",
+      "outputPath": "/Users/rauf/revature/Planner/aspnet/CPlanner.Client/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/drayh/.nuget/NuGet/NuGet.Config"
+        "/Users/rauf/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5825,7 +5825,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }

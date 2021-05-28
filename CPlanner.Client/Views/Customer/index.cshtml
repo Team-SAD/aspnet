@@ -1,0 +1,23 @@
+@model List<CPlanner.Client.Models.CustomerViewModel>
+
+
+<table class="table table-hover">
+    <tr>
+        <th>
+            Name
+        </th>
+    </tr>
+        
+            
+
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.Name) </td>
+        </tr>
+        
+    }
+            
+        
+        
+</table>

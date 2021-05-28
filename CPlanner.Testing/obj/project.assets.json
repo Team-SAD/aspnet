@@ -8118,19 +8118,19 @@
     ]
   },
   "packageFolders": {
-    "/home/drayh/.nuget/packages/": {}
+    "/Users/rauf/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/drayh/revature/project_two/aspnet/CPlanner.Testing/CPlanner.Testing.csproj",
+      "projectUniqueName": "/Users/rauf/revature/Planner/aspnet/CPlanner.Testing/CPlanner.Testing.csproj",
       "projectName": "CPlanner.Testing",
-      "projectPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Testing/CPlanner.Testing.csproj",
-      "packagesPath": "/home/drayh/.nuget/packages/",
-      "outputPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Testing/obj/",
+      "projectPath": "/Users/rauf/revature/Planner/aspnet/CPlanner.Testing/CPlanner.Testing.csproj",
+      "packagesPath": "/Users/rauf/.nuget/packages/",
+      "outputPath": "/Users/rauf/revature/Planner/aspnet/CPlanner.Testing/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/drayh/.nuget/NuGet/NuGet.Config"
+        "/Users/rauf/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8142,8 +8142,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj": {
-              "projectPath": "/home/drayh/revature/project_two/aspnet/CPlanner.Client/CPlanner.Client.csproj"
+            "/Users/rauf/revature/Planner/aspnet/CPlanner.Client/CPlanner.Client.csproj": {
+              "projectPath": "/Users/rauf/revature/Planner/aspnet/CPlanner.Client/CPlanner.Client.csproj"
             }
           }
         }
@@ -8200,7 +8200,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.203/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -48,8 +48,11 @@ namespace CPlanner.Client
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                            name: "default",
+                            pattern: "{controller=Register}/{action=Register}/{id?}");
             });
         }
     }
 }
+ 
