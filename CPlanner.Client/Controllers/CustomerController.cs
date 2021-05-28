@@ -23,7 +23,7 @@ namespace CPlanner.Client.Controllers
             var Customers = new List<CustomerViewModel>();
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:5001/");
+                client.BaseAddress = new Uri("https://plannersp.azurewebsites.net/");
                 //client.BaseAddress = new Uri("https://localhost:5001/");
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

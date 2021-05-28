@@ -22,8 +22,8 @@ namespace CPlanner.Client.Controllers
         {
             using( var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:5001/");
-                var response = await client.PostAsJsonAsync("https://localhost:5001/api/account/register", user);
+                client.BaseAddress = new Uri("https://plannersp.azurewebsites.net/");
+                var response = await client.PostAsJsonAsync("api/account/register", user);
 
                 if(response.IsSuccessStatusCode)
                 {

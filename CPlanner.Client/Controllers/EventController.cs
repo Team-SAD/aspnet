@@ -22,7 +22,7 @@ namespace CPlanner.Client.Controllers
             var Events = new List<EventViewModel>();
            using (var client = new HttpClient())
            {
-               client.BaseAddress = new Uri("https://localhost:5001/");
+               client.BaseAddress = new Uri("https://plannersp.azurewebsites.net/");
                client.DefaultRequestHeaders.Clear();
                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -51,8 +51,8 @@ namespace CPlanner.Client.Controllers
         {
             using( var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:5001/");
-                var response = await client.PostAsJsonAsync("https://localhost:5001/api/event/create", eventItem);
+                client.BaseAddress = new Uri("https://plannersp.azurewebsites.net");
+                var response = await client.PostAsJsonAsync("api/event/create", eventItem);
 
                 if(response.IsSuccessStatusCode)
                 {
@@ -76,8 +76,8 @@ namespace CPlanner.Client.Controllers
             }
             using( var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("https://localhost:5001/");
-                var response = await client.PostAsJsonAsync("https://localhost:5001/api/event/edit", id);
+                client.BaseAddress = new Uri("https://plannersp.azurewebsites.net");
+                var response = await client.PostAsJsonAsync("api/event/edit", id);
 
                 if(response.IsSuccessStatusCode)
                 {
