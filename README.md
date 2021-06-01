@@ -12,10 +12,4 @@ Hows this
 
 Users: create account, set-up appointments with location/time/date with reminders, view them in calendar model. Plan transportation in-between meetings and/or appointments. Find locations in-between destinations for leisure, refreshments, etc.
 
-Active:
 
-No
-
-Mode:
-
-Unpublished
