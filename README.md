@@ -1,7 +1,3 @@
-Team Members
-
-Abdul Yakubu | Daniel Henderson | Stanhope Nwosu
-
 
 Description: Revature Planner
 
