@@ -1,0 +1,20 @@
+﻿@model CPlanner.Client.Models.CustomerViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <h1>Welcome to Event Planner</h1>
+</div>
+
+
+
+
+<div>
+    <a href="/Register">Create an Account</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+

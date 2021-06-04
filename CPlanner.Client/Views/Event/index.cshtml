@@ -1,0 +1,47 @@
+@model List<CPlanner.Client.Models.EventViewModel>
+<a href="/Event/create"><p class="text-end">Create A New Event</a></p>
+@using (Html.BeginForm())
+{
+    <p>
+        Search Events: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table table-hover">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Discription
+        </th>
+        <th>
+            Start Date
+        </th>
+        <th>
+            End Date
+        </th>
+        <th>
+            Location
+        </th>
+        <th></th>
+
+    </tr>
+     
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(model => item.Title)</td>
+                <td>@Html.DisplayFor(model => item.Description) </td>
+                <td>@Html.DisplayFor(model => item.StartDate) </td>
+                <td>@Html.DisplayFor(model => item.EndDate) </td>
+                <td>@Html.DisplayFor(model => item.Location) </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+            </tr>
+
+            
+        }
+</table>
