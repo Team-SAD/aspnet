@@ -16,6 +16,15 @@ namespace CPlanner.Client.Controllers
         {
             return View();
         }
+        // [HttpGet("Index")]
+        // public IActionResult Index()
+        // {
+        //     var user = new AccountViewModel()
+        //     {
+
+        //     }
+        //     return View();
+        // }
 
         [HttpPost("register")]
         public async Task<IActionResult> Register(CustomerViewModel user)
